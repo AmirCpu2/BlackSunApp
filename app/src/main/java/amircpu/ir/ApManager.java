@@ -19,7 +19,7 @@ public class ApManager {
     }
 
     // toggle wifi hotspot on or off
-    public static boolean configApState(Context context) {
+    public static String configApState(Context context) {
         WifiManager wifimanager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
         WifiConfiguration wificonfiguration = new WifiConfiguration();
         wificonfiguration.SSID = String.valueOf(R.string.wifi_ssid);
@@ -36,12 +36,11 @@ public class ApManager {
             }
             Method method = wifimanager.getClass().getMethod("setWifiApEnabled", WifiConfiguration.class, boolean.class);
             method.invoke(wifimanager, wificonfiguration, !isApOn(context));
-            return true;
+            return true+"";
         }
         catch (Exception e) {
-            e.printStackTrace();
+            return e.toString();
         }
-        return false;
     }
 } // end of class
 

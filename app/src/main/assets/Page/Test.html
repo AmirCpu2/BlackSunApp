@@ -1,48 +1,49 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>BlackSunClock</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="../Content/jquery.js"></script>
+    <script src="../Script/jquery-1.10.2.min.js"></script>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Script/bootstrap.min.js"></script>
     <script type="text/javascript" src="../Script/script.js"></script>
     <link rel="stylesheet" type="text/css" href="../Content/style.css">
-    <link rel="stylesheet" href="../Content/bootstrap-4.3.1-dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="../Content/bootstrap-4.3.1-dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</head>
+    </head>
 
 <body class="mainBody">
-<div style="z-index:10;">
-    <!--<div id="mySidenav" class="sidenav">
-        <a href="setting" class="button" id="Setting">Setting</a>
-        <a href="dateTime" class="button" id="DateTime">Time</a>
-    </div>-->
-    <div>
+    <div style="z-index:10;">
+        <!--<div id="mySidenav" class="sidenav">
+            <a href="setting" class="button" id="Setting">Setting</a>
+            <a href="dateTime" class="button" id="DateTime">Time</a>
+        </div>-->
+        <div>
 
-        <div id="Loader">
-            <!--<div  class="loader-container" >
-            <div class="progress float shadow">
-                <div class="progress__item"></div>
+            <div id="Loader">
+                <!--<div  class="loader-container" >
+                <div class="progress float shadow">
+                    <div class="progress__item"></div>
 
-            </div>-->
-            <section>
-                <div class="loader loader-14">
-                    <svg class="loader-star star-small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-                    <polygon fill="#01579b" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
+                </div>-->
+                <section>
+                    <div class="loader loader-14">
+                        <svg class="loader-star star-small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                        <polygon fill="#01579b" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
                            </svg>
-                    <svg class="loader-star star-big" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
-                    <polygon fill="#40c4ff" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
+                        <svg class="loader-star star-big" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.172px" height="23.346px" viewBox="0 0 23.172 23.346" xml:space="preserve">
+                        <polygon fill="#40c4ff" points="11.586,0 8.864,8.9 0,8.9 7.193,14.447 4.471,23.346 11.586,17.84 18.739,23.346 16.77,14.985 23.172,8.9 14.306,8.9  "></polygon>
                            </svg>
-                </div>
-            </section>
+                    </div>
+                </section>
 
-        </div>
+            </div>
 
-        <svg class="sun" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50%" height="50%" viewBox="0 0 2267.72 2267.72" enable-background="new 0 0 2267.72 2267.72" xml:space="preserve">
-        <g>
-        <g id="XMLID_1_" onclick="onclickOut()">
-        <g>
-        <path fill="black" d="M2269.295,1058.609c-558.582,117.919-569.343,193.978-58.393,446.454
+            <svg class="sun" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50%" height="50%" viewBox="0 0 2267.72 2267.72" enable-background="new 0 0 2267.72 2267.72" xml:space="preserve">
+            <g>
+            <g id="XMLID_1_" onclick="onclickOut()">
+            <g>
+            <path fill="black" d="M2269.295,1058.609c-558.582,117.919-569.343,193.978-58.393,446.454
   				c-559.313-112.118-596.931-47.821-218.358,376.446c-474.958-313.948-533.725-267.939-344.288,267.522
   				c-322.408-468.266-396.613-447.077-436.235,119.659c-118.504-555.73-194.95-566.438-448.729-58.083
   				c112.705-556.489,48.064-593.918-378.366-217.249c315.548-472.565,269.306-531.032-268.888-342.557
@@ -54,10 +55,14 @@
 
 
 
+
+
+
+
   		</g>
   	</g>
             <g id="XMLID_8_">
-        <path id="man" onclick="onclickAdamak()" fill="black" d="M1305.386,919.087c0.076,2.78-2.031,5.129-1.749,7.94c0.301,2.824-1.926,4.862-3.585,6.84
+            <path id="man" onclick="onclickAdamak()" fill="black" d="M1305.386,919.087c0.076,2.78-2.031,5.129-1.749,7.94c0.301,2.824-1.926,4.862-3.585,6.84
   				c0.179,1.798,0.477,3.613,0.39,5.442c-1.435,4.03-3.946,7.628-4.918,11.822c-0.883,3.926-1.928,7.807-2.735,11.747
   				c-0.537,2.691,1.121,4.951,2.259,7.242c0.865,2.35-0.271,4.758-0.929,7.019c-1.374,4.178-4.526,7.436-6.306,11.406
   				c-1.167,2.512-0.612,5.264-0.555,7.91c-0.686,2.973-2.256,5.622-3.689,8.283c-1.989,3.881-2.123,8.326-1.989,12.58
@@ -109,10 +114,14 @@
 
 
 
+
+
+
+
   	</g>
             <g id="XMLID_9_">
-        <g>
-        <path fill="black" d="M1162.281,1065.986c1.645,6.751-5.289,10.616-7.412,16.297c1.852,1.337,2.583,3.36,2.674,5.576
+            <g>
+            <path fill="black" d="M1162.281,1065.986c1.645,6.751-5.289,10.616-7.412,16.297c1.852,1.337,2.583,3.36,2.674,5.576
   				c-1.703,2.066-3.301,4.296-5.573,5.813c-4.993,3.302-10.866,5.011-15.692,8.565c-3.379,2.453-7.069,4.475-10.882,6.201
   				c-1.734,0.432-3.691,0.922-5.335-0.015c-3.887-1.487-7.025-4.313-10.373-6.69c-2.884-2.038-4.469-5.414-7.427-7.362
   				c-6.876-4.817-14.977-7.42-22.27-11.495c-3.035-1.754-5.426-4.327-8.102-6.527c-3.018-2.542-6.77-3.955-10.043-6.096
@@ -129,12 +138,20 @@
 
 
 
+
+
+
+
   		</g>
   	</g>
             <g id="Light">
-        <g id="XMLID_2_">
-        <path id="out1" onclick="onclickOut()" fill="black" d="M1491.729,1730.371c11.419,63.703,38.665,152.268,79.423,267.466
+            <g id="XMLID_2_">
+            <path id="out1" onclick="onclickOut()" fill="black" d="M1491.729,1730.371c11.419,63.703,38.665,152.268,79.423,267.466
   					c-69.497-100.938-125.439-175.152-170.77-221.83c31.773-13.042,62.264-28.298,91.32-45.606L1491.729,1730.371z" />
+
+
+
+
 
 
 
@@ -144,8 +161,16 @@
 
 
 
+
+
+
+
             <path id="out3" onclick="onclickOut()" fill="black" d="M958.795,1803.8l-0.089,0.193c-38.829,52.4-84.488,134.587-140.206,246.2
   					c24.885-122.915,39.606-216.061,41.415-280.997C891.764,1782.967,924.794,1794.653,958.795,1803.8z" />
+
+
+
+
 
 
 
@@ -154,8 +179,16 @@
 
 
 
+
+
+
+
             <path id="out5" onclick="onclickOut()" fill="black" d="M547.012,1493.331l-0.329,0.091c-64.64,10.215-156.825,38.008-278.678,80.67
   					c107.161-73.027,184.34-131.007,230.597-177.398C512.428,1430.253,528.554,1462.595,547.012,1493.331z" />
+
+
+
+
 
 
 
@@ -165,8 +198,16 @@
 
 
 
+
+
+
+
             <path id="out7" onclick="onclickOut()" fill="black" d="M507.81,866.64c-14.677,33.636-26.902,68.58-36.243,104.625l-0.209-0.12
   					c-52.072-39.986-137.545-87.36-255.976-145.889C345.395,851.324,442.257,866.179,507.81,866.64z" />
+
+
+
+
 
 
 
@@ -175,8 +216,16 @@
 
 
 
+
+
+
+
             <path id="out9" onclick="onclickOut()" fill="black" d="M874.741,509.465c-34.555,14.2-67.584,31.124-98.896,50.455h-0.06
   					c-9.581-64.521-37.843-157.89-81.873-282.351C768.642,386.104,827.693,463.726,874.741,509.465z" />
+
+
+
+
 
 
 
@@ -185,8 +234,16 @@
 
 
 
+
+
+
+
             <path id="out11" onclick="onclickOut()" fill="black" d="M1446.564,225.197c-25.513,125.978-40.339,220.685-41.52,285.8
   					c-33.06-14.112-67.347-25.443-102.648-34.053l-0.312,0.149C1341.825,425.049,1388.784,340.944,1446.564,225.197z" />
+
+
+
+
 
 
 
@@ -195,8 +252,16 @@
 
 
 
+
+
+
+
             <path id="out13" onclick="onclickOut()" fill="black" d="M1997.06,701.302c-107.16,73.04-184.325,131.018-230.599,177.412
   					c-13.824-33.562-29.95-65.904-48.408-96.64l0.328-0.088C1783.021,771.77,1875.222,743.978,1997.06,701.302z" />
+
+
+
+
 
 
 
@@ -206,8 +271,16 @@
 
 
 
+
+
+
+
             <path id="out15" onclick="onclickOut()" fill="black" d="M1805.336,1312.899c52.773,38.141,134.361,82.885,244.347,137.234
   					c-120.328-24.12-212.259-38.631-277.272-41.025C1785.861,1378.044,1796.816,1345.926,1805.336,1312.899z" />
+
+
+
+
 
 
 
@@ -216,11 +289,15 @@
 
 
 
+
+
+
+
   			</g>
   	</g>
             <g id="XMLID_6_">
-        <g>
-        <path id="fib5" onclick="onclick5()" fill="black" d="M1078.407,518.194l13.301,189.324c-69.558,6.483-138.531,29.799-200.646,71.168h-0.029l-1.315,0.892
+            <g>
+            <path id="fib5" onclick="onclick5()" fill="black" d="M1078.407,518.194l13.301,189.324c-69.558,6.483-138.531,29.799-200.646,71.168h-0.029l-1.315,0.892
   				c-99.42,66.707-162.237,167.181-183.43,275.687c-21.118,108.015-0.956,224.046,65.387,322.676l1.047,3.02l1.509,0.743
   				c41.907,60.952,96.789,107.896,158.455,139.643l-83.622,170.573c-91.648-46.29-173.071-115.748-234.619-206.514l0.016-0.015
   				c-96.49-142.336-125.874-310.113-95.355-466.321c30.52-156.208,120.912-300.832,263.957-396.832l0.015,0.016
@@ -228,43 +305,63 @@
 
 
 
+
+
+
+
   		</g>
   	</g>
             <g id="XMLID_7_">
-        <g>
-        <path id="fib3" onclick="onclick3()" fill="black" d="M1518.122,1336.543l171.459,83.196c-46.526,91.182-116.337,172.193-207.565,233.427l-0.016-0.016
+            <g>
+            <path id="fib3" onclick="onclick3()" fill="black" d="M1518.122,1336.543l171.459,83.196c-46.526,91.182-116.337,172.193-207.565,233.427l-0.016-0.016
   				c-143.061,96-311.692,125.234-468.697,94.871c-49.979-9.666-98.777-25.384-145.183-46.886l83.605-170.572
   				c31.372,14.261,64.284,24.714,97.955,31.228c109.074,21.099,226.25,0.788,325.653-65.919l2.405-1.604l0.03-0.075
   				C1439.047,1452.483,1486.229,1397.896,1518.122,1336.543z" />
 
 
 
+
+
+
+
   		</g>
   	</g>
             <g id="XMLID_5_">
-        <g>
-        <path id="fib2" onclick="onclick2()" fill="black" d="M1656.432,798.774c91.841,140.43,119.432,304.55,89.54,457.559
+            <g>
+            <path id="fib2" onclick="onclick2()" fill="black" d="M1656.432,798.774c91.841,140.43,119.432,304.55,89.54,457.559
   				c-9.714,49.725-25.512,98.261-47.124,144.446l-171.441-83.196c14.332-31.211,24.838-63.94,31.385-97.44
   				c20.582-105.31,1.944-218.232-60.499-315.242L1656.432,798.774z" />
+
+
+
+
 
 
 
   		</g>
   	</g>
             <g id="XMLID_4_">
-        <g>
-        <path id="fib12" onclick="onclick12()" fill="black" d="M1644.669,781.361l-158.153,106.142c-41.341-57.948-94.564-102.782-154.121-133.429l83.621-170.586
+            <g>
+            <path id="fib12" onclick="onclick12()" fill="black" d="M1644.669,781.361l-158.153,106.142c-41.341-57.948-94.564-102.782-154.121-133.429l83.621-170.586
   				C1504.732,628.291,1583.87,694.818,1644.669,781.361z" />
+
+
+
+
 
 
 
   		</g>
   	</g>
             <g id="XMLID_3_">
-        <g>
-        <path id="fib1" onclick="onclick1()" fill="black" d="M1396.959,574.268l-83.62,170.573c-31.37-14.26-64.267-24.714-97.939-31.227
+            <g>
+            <path id="fib1" onclick="onclick1()" fill="black" d="M1396.959,574.268l-83.62,170.573c-31.37-14.26-64.267-24.714-97.939-31.227
   				c-33.687-6.513-68.137-9.07-102.601-7.538l-13.317-189.324c51.143-2.647,102.302,0.967,152.281,10.632
   				C1301.74,537.05,1350.538,552.766,1396.959,574.268z" />
+
+
+
+
 
 
 
@@ -273,8 +370,75 @@
   </g>
   </svg>
 
+        </div>
     </div>
-</div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div class="row" style="text-align: center;">
+                <!-- Button trigger modal Setting -->
+                <button id="StartApp" type="button" class="btn btn-primary" style="width:50%;">
+                    Start Application
+                </button>
+            </div>
+            <div class="row" style="text-align: center;">
+                <!-- Button trigger modal Setting -->
+                <button id="Settings" type="button" class="btn btn-primary" style="width:50%;" data-toggle="modal" data-target="#SettingModal">
+                    Set Ip Address
+                </button>
+            </div>
+            <div class="row" style="text-align: center;">
+                <!-- Button trigger modal DateTime -->
+                <button id="DateTimes" type="button" class="btn btn-primary" style="width:50%;" data-toggle="modal" data-target="#dateTimeModal">
+                    Set Time Clock
+                </button>
+            </div>
+            <div class="row" style="text-align: center;">
+                <!-- Button trigger modal DateTime -->
+                <button id="Reset" type="button" class="btn btn-primary" style="width:50%;">
+                    Reset Status
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Setting -->
+    <div class="modal fade" id="SettingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Set IP</h5>
+                </div>
+
+                <div class="modal-body" style="text-align: -webkit-center;">
+                    <input type="text" value="192.168.43.84" id="inpt-ipAddress" class="form-control" style="text-align:center;">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="btn-changeIP" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Setting -->
+    <div class="modal fade" id="dateTimeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Set Time</h5>
+                </div>
+
+                <div class="modal-body" style="text-align: -webkit-center;">
+                    <input type="time" value="00:00" id="inpt-time" class="form-control" style="text-align:center;">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button id="btn-changeTime" type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
