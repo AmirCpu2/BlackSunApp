@@ -2,6 +2,7 @@
 This Android app is for the black sun clock designed by Web View , <a href="https://github.com/AmirCpu2/BlackSunClock">black sun Clock</a> .
 
 This software is for clock setting, light setting and playing with the black sun clock and is controlled by <a href="https://virtuino.com/">virtuino</a> algorithm.
+
 Capabilities:
 Hotspot Network Control
 Automatic task scheduling update
