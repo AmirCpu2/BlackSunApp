@@ -316,7 +316,7 @@ function updateStatus(target, value) {
 
     if (response != null || response != "")
      {
-            Android.showToast(response);
+            //Android.showToast(response);
             setValue(response);
             $('#loaderContent').hide();
             $('#Loader').hide();
