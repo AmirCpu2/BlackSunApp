@@ -1,4 +1,4 @@
-var ServerRoot = '';
+var ServerRoot = '192.168.43.87/';
 var Time = '';
 
 /*led1 led1.2 led2 led3 led5 led_out led_in*/
@@ -30,34 +30,34 @@ function onclickOut() {
 function onclick1() {
 
     //AjaxChangeColor(2, LEDColor[0] + 1 < 5 ? LEDColor[0] + 1 : 0, 0, 0);
-    updateStatus(vPin[0], LEDColor[0] + 1 < 5 ? LEDColor[0] + 1 : 0);
+    updateStatus(vPin[0], LEDColor[0] + 1 < 4 ? LEDColor[0] + 1 : 0);
 
 }
 
 function onclick12() {
 
     //AjaxChangeColor(3, LEDColor[1] + 1 < 5 ? LEDColor[6] + 1 : 0, 0, 1);
-    updateStatus(vPin[1], LEDColor[1] + 1 < 5 ? LEDColor[6] + 1 : 0);
+    updateStatus(vPin[1], LEDColor[1] + 1 < 4 ? LEDColor[6] + 1 : 0);
 
 }
 
 function onclick2() {
 
     //AjaxChangeColor(4, LEDColor[2] + 1 < 5 ? LEDColor[2] + 1 : 0, 0, 2);
-    updateStatus(vPin[2], LEDColor[2] + 1 < 5 ? LEDColor[2] + 1 : 0);
+    updateStatus(vPin[2], LEDColor[2] + 1 < 4 ? LEDColor[2] + 1 : 0);
 }
 
 function onclick3() {
 
     //AjaxChangeColor(5, LEDColor[3] + 1 < 5 ? LEDColor[3] + 1 : 0, 0, 3);
-    updateStatus(vPin[3], LEDColor[3] + 1 < 5 ? LEDColor[3] + 1 : 0);
+    updateStatus(vPin[3], LEDColor[3] + 1 < 4 ? LEDColor[3] + 1 : 0);
 
 }
 
 function onclick5() {
 
     //AjaxChangeColor(6, LEDColor[4] + 1 < 5 ? LEDColor[4] + 1 : 0, 0, 4);
-    updateStatus(vPin[4], LEDColor[4] + 1 < 5 ? LEDColor[4] + 1 : 0);
+    updateStatus(vPin[4], LEDColor[4] + 1 < 4 ? LEDColor[4] + 1 : 0);
 }
 
 /***********************
@@ -79,7 +79,7 @@ function AjaxChangeColor(led, color, light, index) {
 //Update All Status Of Array
 function updateColor() {
 
-    var ColorChart = ['black', '#EC2227', '#08A650', '#214497', '#FFFF00', '#DA70D6', '#FFFAF0', '#0094ff'];
+    var ColorChart = ['black', '#EC2227', '#08A650', '#214497', '#FFFF00', '#DA70D6', '#0094ff', '#FFFAF0'];
     document.getElementById("man").style.fill = LEDColor[6] > 7 ? ColorChart[0] : ColorChart[LEDColor[6]];
     
     switch (LEDColor[0]) {
@@ -312,7 +312,7 @@ function updateStatus(target, value) {
     //test
     //Android.showToast(request);
     //alert(request);
-    var response = Android.sendGet(ServerRoot + request);
+    var response = Android.sendGet("http:/"+ServerRoot+ request);
 
     if (response != null || response != "")
      {
